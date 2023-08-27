@@ -31,3 +31,5 @@ jobs:
         run: cmake --build build --config ${{ matrix.config }}
       - name: make check
         run: ctest --test-dir build -Ttest -C ${{ matrix.config }} -j1 --output-on-failure
+      - name: test
+        run: ls
